@@ -1,0 +1,133 @@
+/* Credit: http://www.templatemo.com */
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #666;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 1.4em;
+	background-color: #fff;
+	background-position: top;
+	background-repeat: repeat-x;
+}
+
+#home { background-image: url(../images/templatemo_body_home.jpg) }
+#subpage { background-image: url(../images/templatemo_body_subpage.jpg) }
+
+h1, h2, h3, h4, h5, h6 {
+	color:#333;
+	font-weight:400;
+	padding: 0;
+	margin: 0 0 10px 0;
+	font-family: Georgia, "Times New Roman", Times, serif
+}
+
+h1 { font-size:32px }
+h2 { font-size:26px; margin-bottom: 30px; line-height: 20px; }
+h3 { font-size:20px }
+h4 { font-size:18px }
+h5 { font-size:16px }
+h6 { font-size:12px }
+
+.left { float:left }
+.right { float:right }
+.clear { clear: both }
+.h30 { height: 30px }
+.h60 { height: 60px }
+
+img { margin: 0; padding: 0; border: 0 }
+
+p { margin: 0 0 10px 0; padding: 0 }
+em { color: #333 }
+hr { margin-bottom: 40px; padding-top: 20px; border: none; border-bottom: 1px solid #ccc }
+
+a:link, a:visited { color:#76a33b; text-decoration: none}
+a:hover { text-decoration:underline }
+a:hover,a:active { outline:none }
+
+
+#templatemo_wrapper {
+	width: 960px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+#templatemo_header {
+	height: 80px;
+	padding: 30px 0px 20px 70px;
+}
+#templatemo_slider {
+	clear: both;
+	width: 960px;
+	height: 320px;
+	position: relative;
+	margin-bottom: 20px;
+}
+#templatemo_slider span.sliderframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 960px;
+	height: 320px;
+	z-index: 50;
+	background: url(../images/templatemo_slider_frame.png)
+}
+#templatemo_twitter {
+	clear: both;
+	width: 650px;
+	height: 50px;
+	padding: 25px 25px 25px 145px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	font-size: 18px;
+	line-height: 24px;
+	color: #333;
+	background: url(../images/twitter.png) no-repeat
+}
+#templatemo_twitter_1 {
+	clear: both;
+	width: 650px;
+	height: 170px;
+	padding: 25px 25px 25px 145px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	font-size: 18px;
+	line-height: 24px;
+	color: #333;
+	background: url(../images/twitter-1.png) no-repeat
+}
+#templatemo_main {
+	clear: both;
+	width: 960px;
+	margin: 0 auto 40px;
+}
+#templatemo_bottom_wrapper {
+	width: 100%;
+	background: #646464 url(../images/templatemo_bottom.png) top repeat-x
+}
+#templatemo_bottom {
+	width: 960px;
+	margin: 0 auto;
+	padding: 50px 10px 0;
+	color: #ccc
+}
+#templatemo_bottom h4 { color: #fff; margin-bottom: 30px }
+#templatemo_bottom a { color: #fff }
+
+#site_title { float: left ; color: #8e00a6;}
+
+#templatemo_menu { float: left; padding: 0px 60px;
+	margin-bottom: 20px;}
+
+#gotop {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 10px 15px;
+  font-size: 20px;
+  background: #777;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
