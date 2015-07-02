@@ -5,15 +5,12 @@ body {
 	padding: 0;
 	color: #666;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 11px;
 	line-height: 1.4em;
 	background-color: #fff;
 	background-position: top;
 	background-repeat: repeat-x;
 }
 
-#home { background-image: url(../images/templatemo_body_home.jpg) }
-#subpage { background-image: url(../images/templatemo_body_subpage.jpg) }
 
 h1, h2, h3, h4, h5, h6 {
 	color:#333;
@@ -70,7 +67,7 @@ a:hover,a:active { outline:none }
 	width: 960px;
 	height: 320px;
 	z-index: 50;
-	background: url(../images/templatemo_slider_frame.png)
+	background: url(../images/templatemo_slider_frame.png);
 }
 #templatemo_twitter {
 	clear: both;

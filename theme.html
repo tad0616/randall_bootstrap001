@@ -1,143 +1,126 @@
 <!DOCTYPE html>
 <html lang="<{$xoops_langcode}>">
-  <head>
+<head>
+    <!--目前$_SESSION['bootstrap']="<{php}>echo $_SESSION['bootstrap'];<{/php}>"; -->
+    <!--將目前的資料夾名稱，設定為樣板標籤變數 theme_name-->
     <{assign var=theme_name value=$xoTheme->folderName}>
 
+    <!--載入由使用者設定的各項佈景變數-->
     <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/get_var.html"}>
-    <meta charset="<{$xoops_charset}>">
-    <meta name="robots" content="<{$xoops_meta_robots}>" />
-    <meta name="keywords" content="<{$xoops_meta_keywords}>" />
-    <meta name="description" content="<{$xoops_meta_description}>" />
-    <meta name="rating" content="<{$xoops_meta_rating}>" />
-    <meta name="author" content="<{$xoops_meta_author}>" />
-    <meta name="copyright" content="<{$xoops_meta_copyright}>" />
-    <meta name="generator" content="XOOPS" />
 
+    <{if $theme_color|substr:0:10=="bootstrap3"}>
+        <{assign var=tpl_folder value="themes3_tpl"}>
+        <{assign var=row value="row"}>
+        <{assign var=span value="col-md-"}>
+    <{else}>
+        <{assign var=tpl_folder value="themes_tpl"}>
+        <{assign var=row value="row-fluid"}>
+        <{assign var=span value="span"}>
+    <{/if}>
+
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/meta.html"}>
+    <!-- 網站的標題及標語 -->
     <title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
-    <!-- Rss -->
-    <link rel="alternate" type="application/rss+xml" title="" href="<{xoAppUrl backend.php}>" />
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/ico" href="<{xoImgUrl icons/favicon.ico}>" />
-    <link rel="icon" type="image/png" href="<{xoImgUrl icons/favicon.png}>" />
-
-    <!-- Sheet Css -->
-    <link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoAppUrl xoops.css}>" />
-    <link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl css/xoops.css}>" />
-    <link href="<{xoImgUrl css/style.css}>" rel="stylesheet" type="text/css" />
+    <{includeq file="$xoops_rootpath/modules/tadtools/$tpl_folder/link_css.html"}>
     <link rel="stylesheet" href="<{xoImgUrl css/orman.css}>" type="text/css" media="screen" />
     <link rel="stylesheet" href="<{xoImgUrl css/nivo-slider.css}>" type="text/css" media="screen" />
 
-    <!-- Bootstrap -->
-    <link href="<{xoAppUrl modules/tadtools/bootstrap/css/bootstrap.css}>" rel="stylesheet" media="screen">
-
-    <!-- customized header contents -->
+    <!-- 給模組套用的樣板標籤 -->
     <{$xoops_module_header}>
 
-    <style type="text/css">
-      body{
-        font-family:<{$font_family}>;
-      }
+    <!-- 局部套用的樣式，如果有載入完整樣式 theme_css.html 那就不需要這一部份 -->
+    <{includeq file="$xoops_rootpath/modules/tadtools/$tpl_folder/theme_css.html"}>
 
-      <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/theme_css_blocks.html"}>
-      <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/theme_css_navbar.html"}>
+    <style type="text/css">
+    body{
+      font-family:<{$font_family}>;
+    }
     </style>
 
+    <link rel="stylesheet" href="<{xoImgUrl css/slimbox2.css}>" type="text/css" media="screen" />
+    <script type="text/JavaScript" src="<{xoImgUrl js/slimbox2.js}>"></script>
 
-    <script type='text/javascript'>
-      if(typeof jQuery == 'undefined') {
-      document.write("<script type='text/javascript' src='<{xoAppUrl modules/tadtools/jquery/jquery.js}>'><\/script>");
-      }
-    </script>
+  </head>
+  <body id="home">
 
-
-<link rel="stylesheet" href="<{xoImgUrl css/slimbox2.css}>" type="text/css" media="screen" />
-<script type="text/JavaScript" src="<{xoImgUrl js/slimbox2.js}>"></script>
-
-</head>
-<body id="home">
-
-  <div id="templatemo_wrapper">
-       <!--頁首-->
-    	<div id="templatemo_header">
-            <{xoMemberInfo assign=mem}>
+    <div id="templatemo_wrapper">
+         <!--頁首-->
+      	<div id="templatemo_header">
         	<div id="site_title" <{if !$logo_img}>style="<{$header_style}>"<{/if}>>
-                <{if $logo_img}>
-                    <img src="<{$logo_img}>" alt="<{$xoops_sitename}>" style="position:absolute;z-index:10;" class="img-circle">
-                <{else}>
-                 <{if $xoops_isuser}>
-                    <{if $mem.name}>
-                      <{$xoops_sitename}></br>
-                      <{$mem.name}><{$smarty.const.WMNHI_HELLO}>
-                    <{else}>
-                      <{$xoops_sitename}></br>
-                      <{$mem.uname}><{$smarty.const.WMNHI_HELLO}>
-                    <{/if}>
-                 <{else}>
-                    <{$xoops_slogan}>
-                 <{/if}>
-                <{/if}>
+            <{if $logo_img}>
+              <img src="<{$logo_img}>" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>" style="position:absolute;z-index:10;" class="img-circle">
+            <{else}>
+              <{$xoops_sitename}>
+            <{/if}>
           </div>
-      </div>
-          <!--滑動圖片-->
-         <{includeq file="$theme_name/includeq/wnmhi_slider.html"}>
-
-      <div id="templatemo_pin">
-          <!--導覽列-->
-         <{includeq file="$theme_name/includeq/wnmhi_menu.html"}>
-          <!--中間資訊列-->
-        <div id="templatemo_twitter">
-          <{if $xoops_isadmin || $xoops_isuser}>
-            <{$font_slogan}>
-          <{else}>
-            <h2><{$xoops_slogan}></h2>
-          <{/if}>
-        </div>
-          <!--內容區-->
-        <div id="templatemo_main">
-         <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/$theme_type.html"}>
         </div>
 
-        <div id="gotop"><{$smarty.const.THEME_MODULE1}> <i class="icon-chevron-up icon-white"></i></div>
-      </div>
+        <!--滑動圖片-->
+        <{if $slide_width > 0}>
+          <{includeq file="$theme_name/includeq/wnmhi_slider.html"}>
+        <{/if}>
 
-  </div>
+        <div id="templatemo_pin">
+            <!--導覽列-->
+           <{includeq file="$theme_name/includeq/wnmhi_menu.html"}>
+            <!--中間資訊列-->
+          <div id="templatemo_twitter">
+            <{if $xoops_isadmin || $xoops_isuser}>
+              <{$font_slogan}>
+            <{else}>
+              <h2><{$xoops_slogan}></h2>
+            <{/if}>
+          </div>
+            <!--內容區-->
+          <div id="templatemo_main">
+           <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/$theme_type.html"}>
+          </div>
 
-      <script type="text/javascript">
-         $(function() {
-           $("ul.navigation > li:has(ul) > a").append('<div class="arrow-bottom"></div>');
-           $("ul.navigation > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
-
-           // http://fundesigner.net/gototop-tutorail/
-
-           $("#gotop").click(function(){
-                jQuery("html,body").animate({
-                    scrollTop:0
-                },1000);
-            });
-            $(window).scroll(function() {
-                if ( $(this).scrollTop() > 500){
-                    $('#gotop').fadeIn("fast");
-                } else {
-                    $('#gotop').stop().fadeOut("fast");
-                }
-            });
-         });
-      </script>
-          <!--頁尾-->
-    <div id="templatemo_bottom_wrapper" style="background:<{$footer_bgcolor}>">
-    	<div id="templatemo_bottom" style="<{$footer_style}>">
-            <{$xoops_footer}>
+          <div id="gotop"><{$smarty.const.THEME_MODULE1}> <i class="icon-chevron-up icon-white"></i></div>
         </div>
+
     </div>
 
+        <script type="text/javascript">
+           $(function() {
+             $("ul.navigation > li:has(ul) > a").append('<div class="arrow-bottom"></div>');
+             $("ul.navigation > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
 
-      <script src="<{xoAppUrl modules/tadtools/bootstrap/js/bootstrap.min.js}>"></script>
-      <{includeq file="$xoops_rootpath/modules/tadtools/themes_tpl/my_js.html"}>
+             // http://fundesigner.net/gototop-tutorail/
 
-      <{if $show_var==1}>
-       <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/show_var.html"}>
-      <{/if}>
+             $("#gotop").click(function(){
+                  jQuery("html,body").animate({
+                      scrollTop:0
+                  },1000);
+              });
+              $(window).scroll(function() {
+                  if ( $(this).scrollTop() > 500){
+                      $('#gotop').fadeIn("fast");
+                  } else {
+                      $('#gotop').stop().fadeOut("fast");
+                  }
+              });
+           });
+        </script>
+            <!--頁尾-->
+      <div id="templatemo_bottom_wrapper" style="background:<{$footer_bgcolor}>">
+      	<div id="templatemo_bottom" style="<{$footer_style}>">
+              <{$xoops_footer}>
+          </div>
+      </div>
 
-</body>
+
+    <!-- 載入 BootStrap所需的javascript -->
+    <{includeq file="$xoops_rootpath/modules/tadtools/$tpl_folder/bootstrap_js.html"}>
+
+    <!-- 載入自訂的javascript -->
+    <{includeq file="$xoops_rootpath/modules/tadtools/$tpl_folder/my_js.html"}>
+
+    <!-- 是否顯示樣板變數資訊 -->
+    <{if $show_var==1}>
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/show_var.html"}>
+    <{/if}>
+  </body>
+
 </html>

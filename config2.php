@@ -60,7 +60,7 @@ $theme_config[$i]['name']    = "footer_style";
 $theme_config[$i]['text']    = TF_FOOTER_STYLE;
 $theme_config[$i]['desc']    = TF_FOOTER_STYLE_DESC;
 $theme_config[$i]['type']    = "textarea";
-$theme_config[$i]['default'] = "line-height:120%;text-align:center;font-size:2em;";
+$theme_config[$i]['default'] = "line-height:180%;text-align:center;font-size:1em;";
 
 //頂頭選單陣列
 /*$i++;

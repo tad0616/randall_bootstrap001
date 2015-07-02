@@ -5,11 +5,11 @@
  * Copyright 2011, Gilbert Pellegrom
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * March 2010
  */
- 
- 
+
+
 /* The Nivo Slider styles */
 .nivoSlider {
 	position:relative;
@@ -49,8 +49,8 @@
 	position:absolute;
 	left:0px;
 	bottom: 0px;
-	background:#000;
-	color:#fff;
+	background:#fff;
+	color:#000;
 	opacity:0.8; /* Overridden by captionOpacity setting */
 	width:100%;
 	z-index:8;

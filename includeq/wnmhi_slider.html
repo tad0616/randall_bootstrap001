@@ -1,38 +1,24 @@
-
-    <{assign var=theme_name value=$xoTheme->folderName}>
-    <div id="templatemo_slider"><span class="sliderframe"></span>
-       <div class="slider-wrapper theme-orman">
+    <div id="templatemo_slider">
+      <div class="slider-wrapper theme-orman">
         <{if $slider_var}>
           <div id="slider" class="nivoSlider">
            <{foreach from=$slider_var item=wnmhi}>
-               <img src="<{$wnmhi.file_url}>" alt="<{$xoops_sitename}>" title="<{$wnmhi.description}>" />
+              <a href="<{$wnmhi.slide_url}>">
+              <span class="sliderframe">
+              <img src="<{$wnmhi.file_url}>" alt="<{$xoops_sitename}>" title="<{$wnmhi.description}>">
+              </span>
+              </a>
            <{/foreach}>
           </div>
-        <{else}>
-            <div id="slider" class="nivoSlider">
-              <img src="<{xoImgUrl images/slider/01.jpg}>" alt="slider image 2" title="#htmlcaption" />
-                <img src="<{xoImgUrl images/slider/02.jpg}>" alt="slider image 2" />
-                <a rel="nofollow" href="">
-                  <img src="<{xoImgUrl images/slider/03.jpg}>" alt="slider image 2" title="#htmlcaption" />
-                </a>
-                <img src="<{xoImgUrl images/slider/04.jpg}>" alt="slider image 4" />
-            </div>
-            <div id="htmlcaption" class="nivo-html-caption">
-              <{if $xoops_isuser}>
-              <strong><{$smarty.const.WMNHI_SLIDE_PICTURE}></strong>
-              <{else}>
-              <strong><{$xoops_slogan}></strong>
-              <{/if}>
-            </div>
         <{/if}>
-        </div>
-        <script type="text/javascript" src="<{xoImgUrl js/jquery.nivo.slider.pack.js}>"></script>
-        <script type="text/javascript">
-        $(window).load(function() {
-            $('#slider').nivoSlider({
-        controlNav:false,
-         directionNavHide: false
+      </div>
+      <script type="text/javascript" src="<{xoImgUrl js/jquery.nivo.slider.pack.js}>"></script>
+      <script type="text/javascript">
+      $(window).load(function() {
+          $('#slider').nivoSlider({
+            controlNav:false,
+             directionNavHide: false
+          });
       });
-        });
-        </script>
+      </script>
     </div><!-- END of templatemo_slider -->

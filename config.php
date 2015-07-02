@@ -12,7 +12,7 @@ $theme_kind_arr = 'mix';
 $menu_var_kind = 'all';
 
 //額外顏色設定 如： bootstrap3/themes/light/Cerulean
-$theme_color = '';
+$theme_color = 'bootstrap';
 
 /*
 tabs-1 版面基礎設定
@@ -27,7 +27,7 @@ $config_enable['theme_type'] = array('enable' => '1', 'min' => '', 'max' => '', 
 $config_enable['theme_width'] = array('enable' => '0', 'min' => '', 'max' => '', 'require' => '1', 'default' => '960');
 
 //內容區顏色[theme_type_x.html]
-$config_enable['base_color'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'transparent');
+$config_enable['base_color'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '#ffffff');
 
 //左區域顏色[theme_type_1.html]
 $config_enable['lb_color'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'transparent');
@@ -75,19 +75,19 @@ tabs-2 背景圖
 $config_tabs[2] = 0;
 
 //上傳背景圖[theme_css.html]，值：可指定置於「themes/佈景/images/bg/」下的某一檔案名稱
-$config_enable['bg_img'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'bg-body.jpg');
+$config_enable['bg_img'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'templatemo_body_home.jpg');
 
 //背景顏色[theme_css.html]
-$config_enable['bg_color'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '');
+$config_enable['bg_color'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '#FFFFFF');
 
 //背景重複[theme_css.html]，值： repeat （重複）, repeat-x （水平重複）, repeat-y （垂直重複）, no-repeat （不重複）
-$config_enable['bg_repeat'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'repeat');
+$config_enable['bg_repeat'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'repeat-x');
 
 //背景模式[theme_css.html]，值： scroll （捲動）,fixed （固定）
 $config_enable['bg_attachment'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'scroll');
 
 //背景位置[theme_css.html]，值： left top （預設，左上）, right top （右上）, left bottom （左下）, right bottom （右下）, center center （中中）, center top （中上）, center bottom （中下）
-$config_enable['bg_position'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'left top');
+$config_enable['bg_position'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => 'center top');
 
 /*
 tabs-3 滑動圖片
@@ -96,10 +96,10 @@ tabs-3 滑動圖片
 $config_tabs[3] = 1;
 
 //佈景圖片寬度[slideshow_responsive.html]，值：若bootstrap模式，最大值為 12，若 html 模式，則輸入預設佈景圖片寬度，如： 980
-$config_enable['slide_width'] = array('enable' => '0', 'min' => '', 'max' => '', 'require' => '0', 'default' => '960');
+$config_enable['slide_width'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '960');
 
 //佈景圖片高度[slideshow_responsive.html]，值：數值，單位一律為 px
-$config_enable['slide_height'] = array('enable' => '0', 'min' => '', 'max' => '', 'require' => '0', 'default' => '320');
+$config_enable['slide_height'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '320');
 
 //是否可上傳滑動圖片[slideshow_responsive.html]
 $config_enable['use_slide'] = array('enable' => '1', 'min' => '', 'max' => '', 'require' => '0', 'default' => '1');

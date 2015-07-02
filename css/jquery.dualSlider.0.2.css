@@ -7,24 +7,7 @@
 	height: 240px;
 }
 
-#slider-image-frame {
-	display: block;
-	width: 400px;
-	height: 240px;
-	overflow: hidden;
-	position: relative;
-}
 
-#slider-image-frame span.slider_frame {
-	position: absolute;
-	display: block;
-	z-index: 100;
-	top: 0;
-	left: 0;
-	width: 400px;
-	height: 240px;
-	background: url(../images/templatemo_slider_imageframe.png)
-}
 
 #carousel .backgrounds{
 	display: block;
@@ -99,7 +82,7 @@
     height: 200px;
 	padding: 20px 0;
     float:left;
-    
+
 }
 #carousel .panel .details_wrapper .details h2{
 	font-size: 30px;
@@ -124,7 +107,7 @@
     font-size:1.2em;
 	font-weight: 700;
 	text-decoration: none;
-}   
+}
 #carousel  .panel .details_wrapper .details a.slider_more:hover {
 	text-decoration: none;
 }
