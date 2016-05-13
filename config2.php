@@ -20,7 +20,7 @@ $theme_config[$i]['name']    = "header_style";
 $theme_config[$i]['text']    = TF_HEADER_STYLE;
 $theme_config[$i]['desc']    = TF_HEADER_STYLE_DESC;
 $theme_config[$i]['type']    = "textarea";
-$theme_config[$i]['default'] = "font-size:5em;line-height:120%;text-align:center;position:absolute;z-index:10;";
+$theme_config[$i]['default'] = "font-size: 4em; text-align: center;";
 
 //字型設定
 $i++;

@@ -55,6 +55,7 @@
 	width:100%;
 	z-index:8;
 	text-align: center;
+	height: 72px;
 }
 .nivo-caption p {
 	padding:5px 50px;
