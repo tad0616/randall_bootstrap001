@@ -6,13 +6,13 @@
     <{assign var=theme_name value=$xoTheme->folderName}>
 
     <!--載入由使用者設定的各項佈景變數-->
-    <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/get_var.html"}>
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/get_var.tpl"}>
 
-    <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/meta.html"}>
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/meta.tpl"}>
     <!-- 網站的標題及標語 -->
     <title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
 
-    <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/link_css.html"}>
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/link_css.tpl"}>
     <link rel="stylesheet" href="<{xoImgUrl css/orman.css}>" type="text/css" media="screen" />
     <link rel="stylesheet" href="<{xoImgUrl css/nivo-slider.css}>" type="text/css" media="screen" />
 
@@ -24,7 +24,7 @@
     <script src="<{$xoops_url}>/modules/tadtools/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js" type="text/javascript"></script>
 
     <!-- 局部套用的樣式，如果有載入完整樣式 theme_css.html 那就不需要這一部份 -->
-    <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/theme_css.html"}>
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/theme_css.tpl"}>
 
     <style type="text/css">
     body{
@@ -52,12 +52,12 @@
 
         <!--滑動圖片-->
         <{if $slide_width > 0}>
-          <{includeq file="$theme_name/includeq/wnmhi_slider.html"}>
+          <{includeq file="$theme_name/includeq/wnmhi_slider.tpl"}>
         <{/if}>
 
         <div id="templatemo_pin">
             <!--導覽列-->
-           <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/menu/nav-pills/menu.html"}>
+           <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/menu/nav-pills/menu.tpl"}>
             <!--中間資訊列-->
           <div id="templatemo_twitter">
             <{if $xoops_isadmin || $xoops_isuser}>
@@ -70,7 +70,7 @@
           <div id="templatemo_main">
             <!-- 載入布局 -->
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-sm-12">
                   <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/siteclosed_login.tpl"}>
               </div>
             </div>
@@ -111,14 +111,14 @@
 
 
     <!-- 載入 BootStrap所需的javascript -->
-    <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/bootstrap_js.html"}>
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/bootstrap_js.tpl"}>
 
     <!-- 載入自訂的javascript -->
-    <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/my_js.html"}>
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes3_tpl/my_js.tpl"}>
 
     <!-- 是否顯示樣板變數資訊 -->
     <{if $show_var==1}>
-    <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/show_var.html"}>
+    <{includeq file="$xoops_rootpath/modules/tadtools/themes_common/show_var.tpl"}>
     <{/if}>
   </body>
 
