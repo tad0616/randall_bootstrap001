@@ -28,16 +28,13 @@
     }
     </style>
 
-    <link rel="stylesheet" href="<{xoImgUrl css/slimbox2.css}>" type="text/css" media="screen" />
-    <script type="text/JavaScript" src="<{xoImgUrl js/slimbox2.js}>"></script>
-
   </head>
   <body id="home">
 
     <div id="templatemo_wrapper">
          <!--頁首-->
-      	<div id="templatemo_header">
-        	<div id="site_title" <{if !$logo_img}>style="<{$header_style}>;height:80px; margin-top: 20px; position: static;"<{/if}>>
+        <div id="templatemo_header">
+          <div id="site_title" <{if !$logo_img}>style="<{$header_style}>;height:80px; margin-top: 20px; position: static;"<{/if}>>
             <{if $logo_img}>
               <img src="<{$logo_img}>" alt="<{$xoops_sitename}>" title="<{$xoops_sitename}>" style="position:absolute; z-index:10;" class="img-circle">
             <{else}>
@@ -95,7 +92,7 @@
         </script>
             <!--頁尾-->
       <div id="templatemo_bottom_wrapper" style="background:<{$footer_bgcolor}>">
-      	<div id="templatemo_bottom" style="<{$footer_style}>">
+        <div id="templatemo_bottom" style="<{$footer_style}>">
 
               <div class="row">
                 <div class="col-sm-12">
